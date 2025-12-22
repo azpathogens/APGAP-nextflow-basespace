@@ -1,0 +1,17 @@
+input_files:
+ - "42274677162"
+ - "42274677163"
+ - "42274677166"
+ - "42274677167"
+ - "42274677164"
+ - "42274677165"
+
+outdir: "gs://a-test-output/23"
+
+container_image: theiagen/basespace_cli:1.2.1
+
+#Google Cloud Batch variables
+gcpProject: 'tes4-apgap-project-3de8'
+serviceAccountEmail: 'seqera-sa@tes4-apgap-project-3de8.iam.gserviceaccount.com'
+network: 'projects/tes4-apgap-project-3de8/global/networks/tes4-network-dzl1'
+subnetwork: 'projects/tes4-apgap-project-3de8/regions/us-central1/subnetworks/tes4-subnetwork-dzl1'
