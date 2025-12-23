@@ -26,9 +26,8 @@ workflow {
 }
 
 process TRANSFER_BS_TO_GCS {
-    // Docker container that has 'bs' and 'gcloud' installed
+
     container params.container_image
-    // executor 'gcb'
 
     publishDir params.outdir, mode: 'copy'
     
@@ -47,8 +46,6 @@ process TRANSFER_BS_TO_GCS {
     
     # Get the file name from the BaseSpace metadata
     local_filename=\$(bs file get -i $bs_file_id --template '{{.Name}}')
-
-    printenv
 
     # Download the file
     bs download file -i $bs_file_id --output ./
