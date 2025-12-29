@@ -29,7 +29,7 @@ process TRANSFER_BS_TO_GCS {
 
     container params.container_image
 
-    publishDir params.outdir, mode: 'copy'
+    publishDir params.outdir, mode: 'copy', overwrite: true
     
     input:
     val (bs_file_id)
