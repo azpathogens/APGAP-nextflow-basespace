@@ -56,7 +56,7 @@ process DOWNLOAD_FROM_BS {
     val(bs_file_id)
 
     output:
-    path("*"), emit: downloaded
+    path("*.fastq.gz"), emit: downloaded
 
     script:
     """
